@@ -1,0 +1,29 @@
+#!/usr/bin/sh
+set - x
+clean()
+{
+echo "Environment set for blast"
+echo "========================="
+blastfiles=`mount |grep "/blastfs*" |awk '{print $2}'`
+for i in $blastfiles
+do
+umount $i
+done
+
+lspv|grep testvg
+r=$?
+if [[ r == 0]];then
+	
+	
+
+
+
+}
+
+
+
+
+for i in "${blastfiles[@]}"
+do
+echo "lspv"
+done
